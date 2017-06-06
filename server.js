@@ -53,6 +53,6 @@ app.use((req, res, next) => {
   })
 })
 
-app.listen(9090, function () {
+app.listen(process.env.PORT || 9090, function () {
   console.log('Spotify Clone listening on port 9090')
 })
