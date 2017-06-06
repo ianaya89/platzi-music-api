@@ -10,7 +10,7 @@ const app = express()
 
 app.use(cors())
 
-function getToken(cb) {
+function getToken (cb) {
   const authOptions = {
     url: 'https://accounts.spotify.com/api/token',
     headers: {
