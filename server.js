@@ -48,7 +48,7 @@ app.use((req, res, next) => {
         return res.send(err)
       }
 
-      res.send(spotifyRes)
+      res.send(body)
     })
   })
 })
