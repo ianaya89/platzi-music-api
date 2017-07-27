@@ -48,6 +48,8 @@ app.use((req, res, next) => {
         return res.send(err)
       }
 
+      console.log(spotifyRes.status, spotifyRes.statusCode, body)
+
       res.send(body)
     })
   })
