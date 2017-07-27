@@ -20,16 +20,16 @@ function getToken (config, cb) {
 }
 
 function doProxy (req, res, next) {
-  req.logger.info(`Responding to proxy request ${req.url}`)
+  req.logger.verbose(`Responding to proxy request ${req.url}`)
 
-  req.logger.info(`Spotify authentication started`)
+  req.logger.verbose(`Spotify authentication started`)
   getToken(req.config, (err, token) => {
     if (err) {
       req.logger.error('Spotify authentication failed', err)
       return res.send(err)
     }
 
-    req.logger.info(`Spotify authentication success`)
+    req.logger.verbose(`Spotify authentication success`)
 
     const options = {
       url: `${req.config.spotify.baseUrl}${req.url}`,
@@ -37,15 +37,15 @@ function doProxy (req, res, next) {
       json: true
     }
 
-    req.logger.info(`Sending spotify request:  ${JSON.stringify(options)}`)
+    req.logger.verbose(`Sending spotify request:  ${JSON.stringify(options)}`)
 
     request.get(options, (err, spotifyRes, body) => {
       if (err) {
-        req.logger.info('Spotify request failed', err)
+        req.logger.verbose('Spotify request failed', err)
         return res.send(err)
       }
 
-      req.logger.info(`Sending response to client ${spotifyRes.statusCode}`)
+      req.logger.verbose(`Sending response to client ${spotifyRes.statusCode}`)
       res.status(spotifyRes.statusCode).send(body)
     })
   })

@@ -21,11 +21,11 @@ if (config.logger.console) {
   logger.add(winston.transports.Console, config.logger.console)
 }
 
-if (config.logger.sentry) {
+if (config.logger.sentry.dsn) {
   logger.add(SentryTransport, config.logger.sentry)
 }
 
-if (config.logger.loggly) {
+if (config.logger.loggly.inputToken) {
   logger.add(winston.transports.Loggly, config.logger.loggly)
 }
 
