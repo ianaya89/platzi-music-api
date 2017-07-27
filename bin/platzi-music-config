@@ -1,0 +1,5 @@
+#! /usr/bin/env node
+require('../splash')
+const config = require('../config')
+
+config.printExplainTable()

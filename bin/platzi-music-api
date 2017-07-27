@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+require('../splash')
+
+const platziMusicApi = require('../')
+
+platziMusicApi.start((err, result) => {
+  if (err) { throw err }
+  platziMusicApi.logger.info(`Listening for HTTP requests at ${result.url}`)
+})

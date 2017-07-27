@@ -1,19 +1,28 @@
 {
-  "name": "spotify-wrapper",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "platzi-music-api",
+  "version": "2.0.0",
+  "description": "REST API for platzi-musci-vue projects built with Node.js & Express (wrapping spotify API)",
+  "main": "/bin/platzi-music-api",
   "scripts": {
-    "dev": "nodemon server",
-    "start": "node server",
-    "deploy": "./now.sh"
+    "config": "./bin/platzi-music-config --explain-config",
+    "dev": "nodemon ./bin/platzi-music-api",
+    "deploy": "./now.sh",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --fix .js",
+    "start": "./bin/platzi-music-api"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Ignacio Anaya <ignacio.anaya89@gmail.com>",
+  "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "cors": "^2.8.3",
     "express": "^4.15.3",
-    "request": "^2.81.0"
+    "milieu": "^1.7.1",
+    "pretty-ms": "^3.0.0",
+    "request": "^2.81.0",
+    "winston": "^2.3.1",
+    "winston-child-logger": "0.0.1",
+    "winston-sentry-transport": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
@@ -22,6 +31,7 @@
     "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "figlet": "^1.2.0",
     "nodemon": "^1.11.0"
   }
 }
