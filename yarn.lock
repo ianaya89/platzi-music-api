@@ -1285,7 +1285,7 @@ json-stable-stringify@^1.0.0, json-stable-stringify@^1.0.1:
   dependencies:
     jsonify "~0.0.0"
 
-json-stringify-safe@5.0.1, json-stringify-safe@~5.0.1:
+json-stringify-safe@5.0.1, json-stringify-safe@5.0.x, json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
 
@@ -1538,6 +1538,14 @@ nested-error-stacks@^1.0.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-1.0.2.tgz#19f619591519f096769a5ba9a86e6eeec823c3cf"
   dependencies:
     inherits "~2.0.1"
+
+node-loggly-bulk@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/node-loggly-bulk/-/node-loggly-bulk-2.0.0.tgz#e4cf94398d798eba1243052c2f26d7dd9b92104d"
+  dependencies:
+    json-stringify-safe "5.0.x"
+    request ">=2.76.0 <3.0.0"
+    timespan "2.3.x"
 
 node-pre-gyp@^0.6.36:
   version "0.6.36"
@@ -1962,7 +1970,7 @@ repeating@^1.1.2:
   dependencies:
     is-finite "^1.0.0"
 
-request@^2.81.0:
+"request@>=2.76.0 <3.0.0", request@^2.81.0:
   version "2.81.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0"
   dependencies:
@@ -2267,6 +2275,10 @@ timed-out@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/timed-out/-/timed-out-2.0.0.tgz#f38b0ae81d3747d628001f41dafc652ace671c0a"
 
+timespan@2.3.x:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/timespan/-/timespan-2.3.0.tgz#4902ce040bd13d845c8f59b27e9d59bad6f39929"
+
 touch@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/touch/-/touch-1.0.0.tgz#449cbe2dbae5a8c8038e30d71fa0ff464947c4de"
@@ -2389,6 +2401,13 @@ winston-child-logger@0.0.1:
   dependencies:
     extend "^3.0.0"
     winston "^2.2.0"
+
+winston-loggly-bulk@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/winston-loggly-bulk/-/winston-loggly-bulk-2.0.0.tgz#a253827818a14bb6fe0b06cc1c22d8d3ed7d1280"
+  dependencies:
+    node-loggly-bulk "^2.0.0"
+    winston "^2.3.1"
 
 winston-sentry-transport@^1.0.0:
   version "1.0.0"
