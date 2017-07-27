@@ -17,6 +17,14 @@ const config = milieu('pma', {
     sentry: {
       dsn: ''
     },
+
+    loggly: {
+      inputToken: '',
+      subdomain: '',
+      tags: ['platzi-music-api'],
+      json: true
+    },
+
     console: {
       level: 'debug',
       timestamp: true,
