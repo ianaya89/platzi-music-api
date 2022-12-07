@@ -14,9 +14,9 @@
   "author": "Ignacio Anaya <ignacio.anaya89@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.17.2",
+    "body-parser": "^1.20.1",
     "cors": "^2.8.3",
-    "express": "^4.15.3",
+    "express": "^4.18.2",
     "figlet": "^1.2.0",
     "milieu": "^1.7.1",
     "pretty-ms": "^3.0.0",
